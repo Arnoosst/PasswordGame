@@ -1,5 +1,3 @@
-
-
 interface PasswordStrengthProps {
     password: string;
     locked: boolean;
@@ -8,13 +6,11 @@ interface PasswordStrengthProps {
 }
 
 export default function PasswordStrength({ password, locked, sequenceValid, strength }: PasswordStrengthProps) {
-    // nastavíme barvu podle strength
     let color = "";
     if (strength === "Slabé") color = "danger";
     else if (strength === "Střední") color = "warning";
     else if (strength === "Silné") color = "success";
 
-    // pro progress bar můžeme použít hodnoty 33, 66, 100 podle síly
     const barWidth = strength === "Slabé" ? 33 : strength === "Střední" ? 66 : 100;
 
     return (
