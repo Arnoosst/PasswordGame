@@ -1,5 +1,4 @@
-﻿// PasswordStrength.tsx
-import React from "react";
+
 
 interface PasswordStrengthProps {
     password: string;
