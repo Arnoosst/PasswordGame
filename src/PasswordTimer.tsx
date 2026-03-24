@@ -1,4 +1,4 @@
-﻿import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 interface PasswordTimerProps {
     password: string;
@@ -13,7 +13,7 @@ export default function PasswordTimer({ password, setLocked }: PasswordTimerProp
         if (password.length > 0 && startTime === null) {
             setStartTime(Date.now());
         }
-    }, [password]);
+    }, [password, startTime]);
 
     useEffect(() => {
         if (!startTime) return;

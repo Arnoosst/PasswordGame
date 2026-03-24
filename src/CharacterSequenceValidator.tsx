@@ -1,4 +1,4 @@
-﻿import { useEffect } from "react";
+import { useEffect } from "react";
 
 interface CharacterSequenceValidatorProps {
     password: string;
@@ -15,7 +15,7 @@ export default function CharacterSequenceValidator({ password, setSequenceValid 
 
     useEffect(() => {
         setSequenceValid(valid);
-    }, [valid]);
+    }, [valid, setSequenceValid]);
 
     return (
         <div className="mt-2">
