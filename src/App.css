@@ -1,38 +1,105 @@
+
+:root {
+    --primary-color: #3498db;
+    --background-color: #ffffff;
+    --text-color: #212529;
+    --input-bg: #ffffff;
+    --input-text: #212529;
+    --btn-bg: var(--primary-color);
+    --btn-text: #ffffff;
+    --card-bg: #f8f9fa;
+}
+
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #121212;
+        --text-color: #f5f5f5;
+        --primary-color: #4dabf7;
+        --input-bg: #1e1e1e;
+        --input-text: #f5f5f5;
+        --btn-bg: var(--primary-color);
+        --btn-text: #212529;
+        --card-bg: #1c1c1c;
+    }
+}
+
+
+body {
+    background-color: var(--background-color) !important;
+    color: var(--text-color) !important;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
 .App {
-  text-align: center;
+    text-align: center;
+    min-height: 100vh;
+    background-color: var(--background-color);
+    padding: 2rem 1rem;
+    color: var(--text-color);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+input.form-control {
+    background-color: var(--input-bg) !important;
+    color: var(--input-text) !important;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 0.5rem 0.75rem;
+    width: 250px;
+    margin-right: 10px;
+    outline: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button.btn {
+    background-color: var(--btn-bg) !important;
+    color: var(--btn-text) !important;
+    border: none;
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: transform 0.1s ease, background 0.2s ease;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+button.btn:hover {
+    transform: scale(1.05);
 }
 
-.App-link {
-  color: #61dafb;
+
+.card {
+    background-color: var(--card-bg) !important;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 450px;
+    margin: auto;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    color: var(--text-color);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.progress {
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+}
+
+.progress-bar {
+    height: 100%;
+    border-radius: 5px;
+    transition: width 0.5s ease-in-out, transform 0.2s ease;
+    transform: scaleY(1.05);
+    background-color: var(--primary-color) !important;
+}
+
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+li {
+    margin-bottom: 0.3rem;
 }
